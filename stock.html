@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            background-image: url("back.jpg")
+        }
+        div {
+            margin-left: 800px;
+            margin-top: 150px;
+        }
+        #h1 {
+            text-align: center;
+            margin-top: 0px;
+        }
+       
+    </style>
+</head>
+<body>
+    <h1 id="h1">Stock Keeper</h1>
+    <script src="stock_keeper1.js"></script>
+    
+    <div>
+        <table>
+            <tr>
+                <td><label>Select Items :</label></td>
+                <td>
+                    <select id="items">
+                        <option aria-placeholder="blank">Select Items</option>
+                        <option value="rice">1. Rice</option>
+                        <option value="sugar">2. Sugar</option>
+                        <option value="wheat">3. Wheat</option>
+                    </select>
+                </td>
+            </tr>
+            <tr><label>Enter Quantity :</label></tr>
+            <tr>
+                <input type="number" id="quantityKg" onfocus="this.value=''">
+            </tr>
+            <tr>
+                <td>
+                    <button type="submit" id="stockIn" onclick="stockInput()">Stock In</button>
+                </td>
+                <td>
+                    <button type="submit" id="stockOut" onclick="stockOutput()">Stock Out</button>
+                </td>
+                <td>
+                    <button type="reset" id="clear" onclick="inputClear()">Reset</button>
+                </td>
+                <td>
+                    <button type="reset" id="total" onclick="total()">Total</button>
+                </td>
+            </tr>
+        </table>  
+    </div>
+</body>
+</html>
